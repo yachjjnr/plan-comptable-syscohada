@@ -1,0 +1,1 @@
+self.__SSG_MANIFEST=new Set(["\u002Fclasse\u002F[n]","\u002Fcompte\u002F[numero]"]);self.__SSG_MANIFEST_CB&&self.__SSG_MANIFEST_CB()
