@@ -4,7 +4,12 @@
 //  - Autres requêtes GET same-origin (JS, CSS, données, icônes) : cache d'abord,
 //    mise à jour en arrière-plan (stale-while-revalidate).
 
-const CACHE = "pcg-syscohada-v2";
+// Changer cette clé purge l'ancien cache à l'activation, ce qui est
+// indispensable dès que des ressources changent sans changer d'URL. Les icônes
+// et la feuille de style sont servies « cache d'abord » : sans nouvelle clé,
+// un visiteur déjà venu garderait l'ancienne identité visuelle indéfiniment.
+// v3 : passage à l'identité OHADA Pratique (icônes, palette, nom).
+const CACHE = "ohada-comptes-v3";
 
 // Racine réelle du site, déduite de l'emplacement du service worker lui-même.
 // Vaut "/" sur un domaine propre et "/plan-comptable-syscohada/" sur GitHub
