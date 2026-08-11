@@ -1,3 +1,3 @@
 :HL["/plan-comptable-syscohada/_next/static/chunks/0pmjnb-5vcxej.css","style"]
 :HL["/plan-comptable-syscohada/icon-64.png","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"pbdNyy6ohL1t5-PWf7F8M"}
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"/_not-found","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"CnczEO-X6JO32Scbgnim1"}

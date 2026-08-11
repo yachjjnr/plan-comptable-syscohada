@@ -4,12 +4,19 @@
 //  - Autres requêtes GET same-origin (JS, CSS, données, icônes) : cache d'abord,
 //    mise à jour en arrière-plan (stale-while-revalidate).
 
-// Changer cette clé purge l'ancien cache à l'activation, ce qui est
-// indispensable dès que des ressources changent sans changer d'URL. Les icônes
-// et la feuille de style sont servies « cache d'abord » : sans nouvelle clé,
-// un visiteur déjà venu garderait l'ancienne identité visuelle indéfiniment.
-// v3 : passage à l'identité OHADA Pratique (icônes, palette, nom).
-const CACHE = "ohada-comptes-v3";
+// Clé du cache. Sa valeur est RÉÉCRITE À CHAQUE BUILD par
+// scripts/publier-pages.mjs, à partir d'une empreinte des icônes et du
+// manifeste : toute modification de l'identité visuelle change donc la clé, et
+// l'ancien cache est purgé à l'activation.
+//
+// Elle était auparavant incrémentée à la main, et ne l'a pas été lors de deux
+// changements d'icône successifs : les visiteurs déjà venus ont continué de
+// voir l'ancienne identité, puisque les icônes sont servies « cache d'abord »
+// et gardent le même nom de fichier d'une version à l'autre.
+//
+// La valeur ci-dessous ne sert donc qu'au développement local, où le script de
+// publication n'intervient pas.
+const CACHE = "ohada-comptes-a9bcaf3b";
 
 // Racine réelle du site, déduite de l'emplacement du service worker lui-même.
 // Vaut "/" sur un domaine propre et "/plan-comptable-syscohada/" sur GitHub
